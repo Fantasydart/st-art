@@ -1,0 +1,238 @@
+@charset "UTF-8";
+
+/*Prepare to work*/
+
+/*Обнуление*/
+
+*,
+*:before,
+*:after {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+picture {
+  display: block;
+}
+
+picture img {
+  width: 100%;
+}
+
+.page {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  height: 100vh;
+  width: 100%;
+}
+
+.navigation {
+  width: 400px;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.95);
+  -webkit-backdrop-filter: blur(13px);
+          backdrop-filter: blur(13px);
+  overflow: hidden;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+  grid-template-columns: 1fr;
+  -ms-grid-rows: auto 1fr auto;
+  grid-template-rows: auto 1fr auto;
+}
+
+.navigation > *:nth-child(1) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+}
+
+.navigation > *:nth-child(2) {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+}
+
+.navigation > *:nth-child(3) {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+}
+
+.nav__item {
+  display: block;
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 58px;
+  text-decoration: none;
+  color: #222;
+}
+
+.nav__item.active {
+  color: #F22B36;
+}
+
+.nav__item::after {
+  position: absolute;
+  content: '';
+  right: 0;
+  bottom: 12px;
+  width: 0;
+  height: 3px;
+  background-color: #F22B36;
+  -webkit-transition: 0.5s width ease-in-out;
+  -o-transition: 0.5s width ease-in-out;
+  transition: 0.5s width ease-in-out;
+}
+
+.nav__item:hover::after {
+  width: 400px;
+  -webkit-transition: 0.5s width ease-in-out;
+  -o-transition: 0.5s width ease-in-out;
+  transition: 0.5s width ease-in-out;
+}
+
+.nav__item.active::after {
+  width: 200%;
+}
+
+header {
+  padding: 35px 40px 25px 40px;
+  border-bottom: 0.5px solid #484848;
+}
+
+.nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0 40px;
+}
+
+.footer__typography,
+.footer__office {
+  width: 100%;
+  font-size: 12px;
+  line-height: 1.2;
+}
+
+.footer__typography {
+  padding: 20px 40px 28px 40px;
+  border-bottom: 1px solid #dcdcdc;
+}
+
+.footer__office {
+  padding: 28px 40px 34px 40px;
+}
+
+.footer__title {
+  font-weight: 700;
+  color: #F22B36;
+}
+
+.footer__text {
+  width: 205px;
+  font-weight: 300;
+}
+
+/* APP STYLES */
+
+.app.main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  height: 100vh;
+  width: 100%;
+  background-color: #ccc;
+}
+
+.app__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  height: 100%;
+  width: 25%;
+  color: #fff;
+  border-right: 1px solid #fff;
+  padding: 20px 15px 40px;
+  -webkit-transition: 1s width ease-in-out;
+  -o-transition: 1s width ease-in-out;
+  transition: 1s width ease-in-out;
+}
+
+.app__item:hover {
+  width: 50%;
+  -webkit-transition: 1s width ease-in-out;
+  -o-transition: 1s width ease-in-out;
+  transition: 1s width ease-in-out;
+}
+
+.app__item.active {
+  width: 55%;
+  -webkit-transition: 1s width ease-in-out;
+  -o-transition: 1s width ease-in-out;
+  transition: 1s width ease-in-out;
+}
+
+.app__item.active:hover {
+  width: 80%;
+  -webkit-transition: 1s width ease-in-out;
+  -o-transition: 1s width ease-in-out;
+  transition: 1s width ease-in-out;
+}
+
+.app__preview picture {
+  max-width: 100px;
+}
+
+.app__text {
+  max-width: 80%;
+}
+@supports (-webkit-appearance:none){
+
+}
